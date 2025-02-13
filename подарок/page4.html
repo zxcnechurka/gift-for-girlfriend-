@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наши лучшие моменты</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px; /* Добавил отступы */
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+      min-height: 100vh; /* Изменил height на min-height */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Изменил на flex-start */
+      align-items: center;
+      overflow: auto; /* Добавил прокрутку, если контент не помещается */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+      margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto; /* Убрал лишний отступ */
+      animation: slideIn 2s ease-in-out;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .caption {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-family: 'Pacifico', cursive;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3b2f;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Наши лучшие моменты</h1>
+  <div class="gallery">
+    <div>
+      <img src="img/us_1.jpg" alt="Наше фото 1">
+      <div class="caption">Этот день был особенным, потому что <br> это наша первая поездка куда-то вместе</div>
+    </div>
+    <div>
+      <img src="img/us_3.jpg" alt="Наше фото 2">
+      <div class="caption">В этот день смеялись как никогда</div>
+    </div>
+    <div>
+      <img src="img/us_2.jpg" alt="Наше фото 3">
+      <div class="caption">Мы были счастливы просто быть вместе</div>
+    </div>
+    
+  </div>
+  <button onclick="nextPage()">Дальше</button>
+
+  <script>
+    function nextPage() {
+      window.location.href = "page5.html"; 
+    }
+  </script>
+</body>
+</html>

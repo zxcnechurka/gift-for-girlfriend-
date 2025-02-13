@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Почему ты особенная</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+      height: 85vh;
+      height: 1000px;
+      margin-top: -150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      animation: slideIn 2s ease-in-out;
+    }
+
+    .content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content li {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      animation: fadeInList 2s ease-in-out;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-family: 'Pacifico', cursive;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff3b2f;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInList {
+      0% { opacity: 0; transform: translateX(-20px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>5 причин почему ты особенная</h1>
+  <div class="content">
+    <ul>
+      <li>Ты заставляешь меня улыбаться, даже когда у меня плохое настроение.</li>
+      <li>Ты самая красивая девушка на свете.</li>
+      <li>Ты всегда поддерживаешь меня в трудные моменты.</li>
+      <li>С тобой я чувствую себя самым счастливым человеком.</li>
+      <li>Ты вдохновляешь меня становиться лучше каждый день.</li>
+    </ul>
+  </div>
+  <button onclick="nextPage()">Дальше</button>
+
+  <script>
+    function nextPage() {
+      window.location.href = "page4.html"; 
+    }
+  </script>
+</body>
+</html>
